@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-background: #000;
+  --color-surface: #0f172a;
+  --color-text: #ffffff;
+
+  --font-sans: "Inter Variable", sans-serif;
+}
+
+@layer base {
+  html {
+    background: var(--color-background);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    position: relative;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    color: var(--color-text);
+  }
+  p,
+  span {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-4/6 mx-auto px-6;
+  }
+}
+
+@layer utilities {
+
+}
