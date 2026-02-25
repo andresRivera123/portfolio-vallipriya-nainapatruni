@@ -5,6 +5,7 @@
   --color-background: #000;
   --color-surface: #0f172a;
   --color-text: #ffffff;
+  --color-gray: #b8b8b8;
 
   --font-sans: "Inter Variable", sans-serif;
 }
@@ -16,6 +17,7 @@
 
   body {
     font-family: var(--font-sans);
+    color: var(--color-text);
     position: relative;
     font-weight: 300;
     margin: 0;
@@ -37,7 +39,11 @@
 
 @layer components {
   .container-main {
-    @apply max-w-4/6 mx-auto px-6;
+    @apply max-w-4/5 mx-auto px-6;
+  }
+
+  .nav-link:hover {
+    color: var(--color-text);
   }
 }
 

@@ -1,3 +1,14 @@
-<header class="w-full max-w-[90%] 2xl:max-w-[1440px] mx-auto py-8">
-    
+---
+import Button from "./Button.astro";
+---
+
+<header class="container-main pt-8 pb-5 flex flex-row justify-between items-center ">
+  <a class="text-2xl font-extrabold">VN.</a>
+  <nav class="flex flex-row gap-4 text-sm text-[var(--color-gray)] font-medium uppercase hover:">
+    <a href="/" class="nav-link">Skills</a>
+    <a href="/" class="nav-link">Projects</a>
+    <a href="/" class="nav-link">Experience</a>
+    <a href="/" class="nav-link">Contact</a>
+  </nav>
+  <Button text="Hire me" color="primary" link="/" blank={false} />
 </header>

@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/inter";
 import "../styles/global.css";
+import Header from "../components/Header.astro";
 
 interface Props {
   title: string;
@@ -24,10 +25,10 @@ const { description } = Astro.props;
   </head><div></div>
   <title>{title}</title>
 
-  <body>
-    <div class="container-main"><h1 class="text-white">Test</h1></div>
-
+  <body> 
+    <Header/>
     <slot />
   </body>
+
 
 </html>
