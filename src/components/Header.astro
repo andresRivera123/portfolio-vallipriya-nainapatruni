@@ -1,14 +1,41 @@
 ---
+import Menu from "../icons/Menu.astro";
 import Button from "./Button.astro";
 ---
 
-<header class="container-main pt-8 pb-5 flex flex-row justify-between items-center ">
-  <a class="text-2xl font-extrabold">VN.</a>
-  <nav class="flex flex-row gap-4 text-sm text-[var(--color-gray)] font-medium uppercase hover:">
-    <a href="/" class="nav-link">Skills</a>
-    <a href="/" class="nav-link">Projects</a>
-    <a href="/" class="nav-link">Experience</a>
-    <a href="/" class="nav-link">Contact</a>
+<header
+  class="container-main pt-8 pb-5 flex justify-between items-center relative"
+>
+  <a class="text-2xl font-extrabold" href="/">VN.</a>
+
+  <Menu
+    id="openMenu"
+    class="size-6 text-[var(--color-text)] cursor-pointer sm:hidden"
+  />
+
+  <nav
+    id="mainNav"
+    class="absolute top-full left-0 w-full hidden flex-col items-center gap-9 mt-3
+           bg-black/95 backdrop-blur-md z-40
+           sm:static sm:flex sm:flex-row sm:bg-transparent sm:py-4 sm:w-auto sm:mt-0"
+  >
+    <div class="flex flex-col text-center gap-5 sm:flex-row">
+      <a href="/" class="nav-link">Skills</a>
+      <a href="/" class="nav-link">Projects</a>
+      <a href="/" class="nav-link">Experience</a>
+      <a href="/" class="nav-link">Contact</a>
+    </div>
+    <div class="w-auto sm:w-full flex justify-center mt-5 sm:mt-0">
+      <Button text="Hire me" color="primary" link="/" blank={false} />
+    </div>
   </nav>
-  <Button text="Hire me" color="primary" link="/" blank={false} />
 </header>
+
+<script>
+  const openBtn = document.getElementById("openMenu");
+  const nav = document.getElementById("mainNav");
+
+  openBtn?.addEventListener("click", () => {
+    nav?.classList.toggle("hidden");
+  });
+</script>
