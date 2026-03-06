@@ -48,7 +48,7 @@
   }
 
   .nav-link {
-    @apply text-sm font-medium transition-all duration-300;
+    @apply text-lg font-medium transition-all duration-300 sm:text-sm;
     color: var(--color-gray);
   }
 
