@@ -1,17 +1,28 @@
 ---
 interface ButtonProps {
-  text: string;
-  color: "primary" | "secondary";
-  link: string;
-  blank: boolean;
+  text: string
+  color?: "primary" | "secondary"
+  link: string
+  blank?: boolean
 }
 
-const { text, color = "primary", link, blank } = Astro.props;
+const { text, color = "primary", link, blank = false } = Astro.props as ButtonProps
+
+const baseStyles =
+  "max-w-max inline-flex items-center text-base px-7 py-3 font-bold rounded-xl text-pretty transition-transform hover:scale-105"
+
+const variants = {
+  primary:
+    "bg-[var(--color-primary)] text-white",
+  secondary:
+    "bg-slate-900 border border-slate-800 text-slate-100"
+}
 ---
 
 <a
   href={link}
-  target={blank === true ? "_blank" : "_self"}
-  class={`max-w-max inline-flex items-center px-7 py-2 text-sm font-medium rounded-full text-pretty ${color === "primary" ? "bg-[var(--color-primary)] border-gray-200[var(--color-primary)]g-4 focus:outline-none focus:ring-gray-100 hover:scale-105 transition-transform" : ""} ${color === "secondary" ? "bg-white border-gray-200  hover:bg-gray-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 hover:scale-105 transition-transform" : ""}`}
-  >{text}</a
+  target={blank ? "_blank" : "_self"}
+  class={`${baseStyles} ${variants[color]}`}
 >
+  {text}
+</a>
