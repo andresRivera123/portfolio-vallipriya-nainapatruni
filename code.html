@@ -1,0 +1,511 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6", 
+              "background-light": "#f8f6f6",
+              "background-dark": "#000000",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .grid-overlay {
+        background-size: 40px 40px;
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(59, 130, 246, 0.05) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(59, 130, 246, 0.05) 1px,
+            transparent 1px
+          );
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-dark font-display text-slate-100 selection:bg-primary/30"
+  >
+    <div class="relative min-h-screen w-full flex flex-col grid-overlay">
+      <header
+        class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md"
+      >
+        <div
+          class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="size-10 bg-primary/20 rounded-lg flex items-center justify-center border border-primary/30"
+            >
+              <span class="material-symbols-outlined text-primary"
+                >analytics</span
+              >
+            </div>
+            <h2 class="text-xl font-black tracking-tight text-slate-100">
+              VN.
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-10">
+            <a
+              class="text-sm font-medium text-slate-400 hover:text-primary transition-colors"
+              href="#skills"
+              >Skills</a
+            >
+            <a
+              class="text-sm font-medium text-slate-400 hover:text-primary transition-colors"
+              href="#projects"
+              >Projects</a
+            >
+            <a
+              class="text-sm font-medium text-slate-400 hover:text-primary transition-colors"
+              href="#experience"
+              >Experience</a
+            >
+            <a
+              class="text-sm font-medium text-slate-400 hover:text-primary transition-colors"
+              href="#contact"
+              >Contact</a
+            >
+          </nav>
+          <div class="flex items-center gap-4">
+            <button
+              class="bg-primary hover:bg-primary/90 text-white text-sm font-bold h-11 px-6 rounded-xl transition-all shadow-lg shadow-primary/20"
+            >
+              Resume
+            </button>
+          </div>
+        </div>
+      </header>
+      <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="relative pt-24 pb-32 px-6">
+          <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold mb-8 uppercase tracking-widest"
+            >
+              Available for Opportunities
+            </div>
+            <h1
+              class="text-5xl md:text-8xl font-black text-slate-100 leading-[1.1] tracking-tight mb-8"
+            >
+              Vallipriya Nainapatruni<br />
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400"
+                >Data Analytics</span
+              >
+            </h1>
+            <p
+              class="max-w-2xl text-lg md:text-xl text-slate-400 font-light leading-relaxed mb-12"
+            >
+              Transforming complex datasets into actionable narratives.
+              Specializing in advanced statistical modeling and interactive
+              visualization to drive business intelligence.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button
+                class="bg-primary text-white font-bold h-14 px-10 rounded-xl hover:scale-105 transition-transform"
+              >
+                View Portfolio
+              </button>
+              <button
+                class="bg-slate-900 border border-slate-800 text-slate-100 font-bold h-14 px-10 rounded-xl hover:bg-slate-800 transition-colors"
+              >
+                Let's Talk
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- Skills Section -->
+        <section class="py-24 px-6 bg-slate-950/50" id="skills">
+          <div class="max-w-7xl mx-auto">
+            <div class="mb-16">
+              <h3
+                class="text-primary font-bold tracking-widest uppercase text-sm mb-4"
+              >
+                Core Expertise
+              </h3>
+              <h2 class="text-3xl md:text-4xl font-bold text-slate-100">
+                Technical Arsenal
+              </h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                class="group p-8 rounded-2xl border border-slate-800 bg-background-dark hover:border-primary/50 transition-all duration-300"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl text-primary mb-6 block group-hover:scale-110 transition-transform"
+                  >database</span
+                >
+                <h4 class="text-xl font-bold text-slate-100 mb-2">SQL</h4>
+                <p class="text-slate-500 text-sm">
+                  Complex querying, database optimization, and schema design.
+                </p>
+              </div>
+              <div
+                class="group p-8 rounded-2xl border border-slate-800 bg-background-dark hover:border-primary/50 transition-all duration-300"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl text-primary mb-6 block group-hover:scale-110 transition-transform"
+                  >bar_chart</span
+                >
+                <h4 class="text-xl font-bold text-slate-100 mb-2">Power BI</h4>
+                <p class="text-slate-500 text-sm">
+                  DAX modeling, interactive dashboards, and automated reporting.
+                </p>
+              </div>
+              <div
+                class="group p-8 rounded-2xl border border-slate-800 bg-background-dark hover:border-primary/50 transition-all duration-300"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl text-primary mb-6 block group-hover:scale-110 transition-transform"
+                  >terminal</span
+                >
+                <h4 class="text-xl font-bold text-slate-100 mb-2">Python</h4>
+                <p class="text-slate-500 text-sm">
+                  Pandas, NumPy, and Scikit-learn for deep exploratory data
+                  analysis.
+                </p>
+              </div>
+              <div
+                class="group p-8 rounded-2xl border border-slate-800 bg-background-dark hover:border-primary/50 transition-all duration-300"
+              >
+                <span
+                  class="material-symbols-outlined text-4xl text-primary mb-6 block group-hover:scale-110 transition-transform"
+                  >table_view</span
+                >
+                <h4 class="text-xl font-bold text-slate-100 mb-2">Excel</h4>
+                <p class="text-slate-500 text-sm">
+                  VBA, Pivot Tables, and advanced financial modeling techniques.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Projects Section -->
+        <section class="py-24 px-6" id="projects">
+          <div class="max-w-7xl mx-auto">
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
+            >
+              <div>
+                <h3
+                  class="text-primary font-bold tracking-widest uppercase text-sm mb-4"
+                >
+                  Portfolio
+                </h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-100">
+                  Featured Case Studies
+                </h2>
+              </div>
+              <a
+                class="text-primary font-bold flex items-center gap-2 group"
+                href="#"
+              >
+                Explore All Projects
+                <span
+                  class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+              <!-- Project 1 -->
+              <div
+                class="group bg-slate-900/40 rounded-3xl overflow-hidden border border-slate-800 flex flex-col"
+              >
+                <div class="relative h-64 overflow-hidden">
+                  <img
+                    alt="Sales dashboard with dark UI"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    data-alt="Vibrant data visualization dashboard on dark background"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKcXGp73jldZ6gV_xP2fXP_ozRSFVzNHs9zZ-XGt7pEOvsgxXHA5r1k5yCEcJAlvd0cgal8Gd_oW0eicNtDMDv-31Ofx_-p6UYqf7G0QaW3VwPHtMPBIDlcbZvIcmxWwPTzapJChjisG9cDPYfUNB5sGAezK4_yxNCjch8Di5kuw_NBC1ehhA6_gRkR_1ejv7VzivEO3jlFwq4siqbw56vyvQuuwi0jRtJLjqlRX5qAJ9yCwFamQMDL2oSpenKQKlNsd_yttwRag"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-6 left-6 flex gap-2">
+                    <span
+                      class="px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-slate-700 text-xs font-semibold text-primary"
+                      >Power BI</span
+                    >
+                    <span
+                      class="px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-slate-700 text-xs font-semibold text-primary"
+                      >SQL</span
+                    >
+                  </div>
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                  <div class="flex justify-between items-start mb-4">
+                    <h4 class="text-2xl font-bold text-slate-100">
+                      Sales &amp; Profitability Dashboard
+                    </h4>
+                    <a
+                      class="text-slate-400 hover:text-white transition-colors"
+                      href="#"
+                    >
+                      <svg
+                        class="size-6"
+                        fill="currentColor"
+                        viewbox="0 0 24 24"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                          fill-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <p class="text-slate-400 font-light leading-relaxed mb-8">
+                    End-to-end analysis of multi-regional sales performance.
+                    Identified key revenue leakages resulting in a 12% profit
+                    margin improvement through supply chain optimization.
+                  </p>
+                  <button
+                    class="mt-auto w-fit text-sm font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors"
+                  >
+                    View Full Case Study
+                  </button>
+                </div>
+              </div>
+              <!-- Project 2 -->
+              <div
+                class="group bg-slate-900/40 rounded-3xl overflow-hidden border border-slate-800 flex flex-col"
+              >
+                <div class="relative h-64 overflow-hidden">
+                  <img
+                    alt="Complexity analysis chart"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    data-alt="Technical graph showing data performance metrics"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTIR3KF8hmwmUlclupSyYa76dD1j5QgVxlSkqsswghghtOWRVPQLv0QfjKHarBaMikSVOHS_vyJ1j8gY5p5YIeZNaFJ9xqnBLO-y5KgMbfNX9dAoPm4K2gUmp7Oy0M8Er50Us_Tfgfm58T3Tw8683tg_dwUo1VkyaeCDaz6_mA7r1SZwN9bkk1qTw9hH-plAuZzrFZHDK_UHnTtoMqTbZQVJBZJ6rSWEzrG3roTnGzcXxUafMh72qq7ynTCP8vyo8Fla2dzU575Q"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"
+                  ></div>
+                  <div class="absolute bottom-6 left-6 flex gap-2">
+                    <span
+                      class="px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-slate-700 text-xs font-semibold text-primary"
+                      >Python</span
+                    >
+                    <span
+                      class="px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-slate-700 text-xs font-semibold text-primary"
+                      >Statistics</span
+                    >
+                  </div>
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                  <div class="flex justify-between items-start mb-4">
+                    <h4 class="text-2xl font-bold text-slate-100">
+                      Customer Support Ops Analysis
+                    </h4>
+                    <a
+                      class="text-slate-400 hover:text-white transition-colors"
+                      href="#"
+                    >
+                      <svg
+                        class="size-6"
+                        fill="currentColor"
+                        viewbox="0 0 24 24"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                          fill-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <p class="text-slate-400 font-light leading-relaxed mb-8">
+                    Statistical breakdown of ticket resolution times and agent
+                    workload. Implemented a predictive priority system using NLP
+                    to reduce first-response latency.
+                  </p>
+                  <button
+                    class="mt-auto w-fit text-sm font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors"
+                  >
+                    View Full Case Study
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Experience Section -->
+        <section class="py-24 px-6 bg-slate-950/50" id="experience">
+          <div class="max-w-4xl mx-auto">
+            <div class="mb-16 text-center">
+              <h3
+                class="text-primary font-bold tracking-widest uppercase text-sm mb-4"
+              >
+                Journey
+              </h3>
+              <h2 class="text-3xl md:text-4xl font-bold text-slate-100">
+                Professional Experience
+              </h2>
+            </div>
+            <div class="relative space-y-12">
+              <!-- Vertical Line -->
+              <div
+                class="absolute left-0 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-slate-800 to-transparent"
+              ></div>
+              <!-- Item 1 -->
+              <div
+                class="relative flex flex-col md:flex-row md:justify-between items-start md:items-center"
+              >
+                <div
+                  class="md:w-[45%] mb-4 md:mb-0 md:text-right order-2 md:order-1"
+                >
+                  <h4 class="text-xl font-bold text-slate-100">
+                    Research Assistant
+                  </h4>
+                  <p class="text-primary font-semibold mb-2">
+                    Dublin Business School
+                  </p>
+                  <p class="text-slate-400 text-sm leading-relaxed">
+                    Conducted intensive data collection and quantitative
+                    analysis for academic research projects. Managed large
+                    datasets and performed regression analysis.
+                  </p>
+                </div>
+                <!-- Center Dot -->
+                <div
+                  class="absolute left-[-5px] md:left-1/2 md:-translate-x-1.5 top-1.5 md:top-auto size-3 rounded-full bg-primary ring-4 ring-primary/20 z-10 order-1 md:order-2"
+                ></div>
+                <div
+                  class="md:w-[45%] md:pl-8 text-slate-500 font-medium order-3"
+                >
+                  2022 — Present
+                </div>
+              </div>
+              <!-- Item 2 -->
+              <div
+                class="relative flex flex-col md:flex-row md:justify-between items-start md:items-center"
+              >
+                <div
+                  class="md:w-[45%] mb-4 md:mb-0 hidden md:block text-right text-slate-500 font-medium order-1"
+                >
+                  2020 — 2022
+                </div>
+                <!-- Center Dot -->
+                <div
+                  class="absolute left-[-5px] md:left-1/2 md:-translate-x-1.5 top-1.5 md:top-auto size-3 rounded-full bg-slate-700 ring-4 ring-slate-800 z-10 order-1 md:order-2"
+                ></div>
+                <div class="md:w-[45%] md:pl-8 order-2 md:order-3">
+                  <h4 class="text-xl font-bold text-slate-100">Supervisor</h4>
+                  <p class="text-primary font-semibold mb-2">Wow Burger</p>
+                  <p class="text-slate-400 text-sm leading-relaxed">
+                    Led operational efficiency improvements and team management.
+                    Leveraged sales data to optimize inventory levels and reduce
+                    waste.
+                  </p>
+                  <p class="md:hidden text-slate-500 text-sm mt-2 font-medium">
+                    2020 — 2022
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="py-32 px-6" id="contact">
+          <div
+            class="max-w-4xl mx-auto rounded-[2rem] bg-gradient-to-br from-slate-900 to-background-dark border border-slate-800 p-8 md:p-16 text-center"
+          >
+            <h2 class="text-4xl md:text-5xl font-black text-slate-100 mb-8">
+              Ready to unlock your data's potential?
+            </h2>
+            <p class="text-slate-400 text-lg mb-12">
+              I'm currently looking for new opportunities in Data Analysis and
+              Business Intelligence. Let's build something insightful together.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+              <a
+                class="flex items-center gap-3 bg-primary text-white font-bold h-14 px-8 rounded-xl hover:scale-105 transition-transform"
+                href="mailto:hello@vallipriya.com"
+              >
+                <span class="material-symbols-outlined">mail</span>
+                Email Me
+              </a>
+              <a
+                class="flex items-center gap-3 bg-slate-800 text-white font-bold h-14 px-8 rounded-xl hover:bg-slate-700 transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined">link</span>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="border-t border-slate-900 py-12 px-6">
+        <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="size-8 bg-slate-900 rounded flex items-center justify-center border border-slate-800"
+            >
+              <span class="material-symbols-outlined text-sm text-slate-400"
+                >analytics</span
+              >
+            </div>
+            <span class="text-slate-500 text-sm font-medium"
+              >© 2024 Vallipriya Nainapatruni. Built with precision.</span
+            >
+          </div>
+          <div class="flex gap-8">
+            <a
+              class="text-slate-500 hover:text-primary transition-colors text-sm"
+              href="#"
+              >GitHub</a
+            >
+            <a
+              class="text-slate-500 hover:text-primary transition-colors text-sm"
+              href="#"
+              >Tableau</a
+            >
+            <a
+              class="text-slate-500 hover:text-primary transition-colors text-sm"
+              href="#"
+              >Privacy Policy</a
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

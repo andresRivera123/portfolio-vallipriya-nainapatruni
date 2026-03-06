@@ -1,5 +1,6 @@
 ---
 import Menu from "../icons/Menu.astro";
+import Close from "../icons/Close.astro";
 import Button from "./Button.astro";
 ---
 
@@ -7,11 +8,15 @@ import Button from "./Button.astro";
   class="container-main pt-8 pb-5 flex justify-between items-center relative"
 >
   <a class="text-2xl font-extrabold" href="/">VN.</a>
-
-  <Menu
-    id="openMenu"
-    class="size-6 text-[var(--color-text)] cursor-pointer sm:hidden"
-  />
+  <button id="menuToggle" class="cursor-pointer" aria-label="Toggle menu">
+    <Menu
+      id="openMenu"
+      class="menu-icon size-6 text-[var(--color-text)] cursor-pointer sm:hidden"
+    />
+    <Close
+      class="close-icon size-8 text-[var(--color-text)] cursor-pointer hidden"
+    />
+  </button>
 
   <nav
     id="mainNav"
@@ -32,10 +37,14 @@ import Button from "./Button.astro";
 </header>
 
 <script>
-  const openBtn = document.getElementById("openMenu");
   const nav = document.getElementById("mainNav");
+  const toggle = document.getElementById("menuToggle");
+  const menuIcon = toggle?.querySelector(".menu-icon");
+  const closeIcon = toggle?.querySelector(".close-icon");
 
-  openBtn?.addEventListener("click", () => {
+  toggle?.addEventListener("click", () => {
     nav?.classList.toggle("hidden");
+    menuIcon?.classList.toggle("hidden");
+    closeIcon?.classList.toggle("hidden");
   });
 </script>
