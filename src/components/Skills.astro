@@ -1,0 +1,57 @@
+---
+import Database from "../icons/Database.astro"
+import Power from "../icons/Power.astro"
+import Terminal from "../icons/Terminal.astro"
+import Excel from "../icons/Excel.astro"
+---
+
+<section id="skills" class="py-24  bg-slate-950/50">
+  <div class="container-main">
+    <div class="mb-16">
+      <h3 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">
+        Core Expertise
+      </h3>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-100">
+        Technical Arsenal
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div
+        class="group p-8 rounded-2xl border border-slate-800 bg-background-dark hover:border-primary/50 transition-all duration-300"
+      >
+        <Database class="icon-skills" />
+        <h4 class="text-xl font-bold text-slate-100 mb-2">SQL</h4>
+        <p class="text-slate-500 text-sm">
+          Complex querying, database optimization, and schema design.
+        </p>
+      </div>
+      <div
+        class="group p-8 rounded-2xl border border-slate-800 bg-background-dark hover:border-primary/50 transition-all duration-300"
+      >
+        <Power class="icon-skills" />
+        <h4 class="text-xl font-bold text-slate-100 mb-2">Power BI</h4>
+        <p class="text-slate-500 text-sm">
+          DAX modeling, interactive dashboards, and automated reporting.
+        </p>
+      </div>
+      <div
+        class="group p-8 rounded-2xl border border-slate-800 bg-background-dark hover:border-primary/50 transition-all duration-300"
+      >
+        <Terminal class="icon-skills" />
+        <h4 class="text-xl font-bold text-slate-100 mb-2">Python</h4>
+        <p class="text-slate-500 text-sm">
+          Pandas, NumPy, and Scikit-learn for deep exploratory data analysis.
+        </p>
+      </div>
+      <div
+        class="group p-8 rounded-2xl border border-slate-800 bg-background-dark hover:border-primary/50 transition-all duration-300"
+      >
+        <Excel class="icon-skills" />
+        <h4 class="text-xl font-bold text-slate-100 mb-2">Excel</h4>
+        <p class="text-slate-500 text-sm">
+          VBA, Pivot Tables, and advanced financial modeling techniques.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -22,7 +22,7 @@
   body {
     font-family: var(--font-sans);
     color: var(--color-text);
-    
+
     position: relative;
     font-weight: 300;
     margin: 0;
@@ -44,7 +44,7 @@
 
 @layer components {
   .container-main {
-    @apply max-w-[1200px] mx-auto px-6;
+    @apply max-w-7xl mx-auto px-6;
   }
 
   .nav-link {
@@ -55,6 +55,18 @@
   .nav-link:hover {
     color: var(--color-text);
     text-shadow: 0 0 4px var(--color-text);
+  }
+
+  .icon-skills {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+    transition: transform 180ms ease;
+  }
+
+  .group:hover .icon-skills {
+    transform: scale(1.2);
   }
 
   @layer utilities {

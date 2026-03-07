@@ -4,38 +4,36 @@ import Close from "../icons/Close.astro";
 import Button from "./Button.astro";
 ---
 
-<header
-  class="container-main sticky top-0 pt-8 pb-5 flex justify-between items-center bg-black/95 backdrop-blur-md z-40"
->
-  <a class="text-3xl font-extrabold" href="/">VN.</a>
-  <button id="menuToggle" class="cursor-pointer" aria-label="Toggle menu">
-    <Menu
-      id="openMenu"
-      class="menu-icon size-6 text-[var(--color-text)] cursor-pointer sm:hidden"
-    />
-    <Close
-      class="close-icon size-8 text-[var(--color-text)] cursor-pointer hidden"
-    />
-  </button>
+<header class="sticky top-0 pt-8 pb-5 bg-black/90 backdrop-blur-md z-40">
+  <div class="container-main flex justify-between items-center">
+    <a class="text-3xl font-extrabold" href="/">VN.</a>
+    <button id="menuToggle" class="cursor-pointer" aria-label="Toggle menu">
+      <Menu
+        id="openMenu"
+        class="menu-icon size-6 text-[var(--color-text)] cursor-pointer sm:hidden"
+      />
+      <Close
+        class="close-icon size-8 text-[var(--color-text)] cursor-pointer hidden"
+      />
+    </button>
 
-  <nav
-    id="mainNav"
-    class="bg-black/95 backdrop-blur-md z-40 absolute top-full left-0 w-full hidden flex-col items-center gap-9 pt-8 h-dvh sm:max-h-max
-           
-           sm:static sm:flex sm:flex-row sm:bg-transparent sm:w-auto sm:pt-0"
-  >
-    <div
-      class="flex flex-col text-center gap-2 min-h-7/12 sm:min-h-0 justify-between sm:flex-row sm:gap-5"
+    <nav
+      id="mainNav"
+      class="bg-black/95 backdrop-blur-md z-40 absolute top-full left-0 w-full hidden flex-col items-center gap-9 pt-8 h-dvh sm:max-h-max sm:static sm:flex sm:flex-row sm:bg-transparent sm:backdrop-blur-none sm:w-auto sm:pt-0"
     >
-      <a href="/" class="nav-link">Skills</a>
-      <a href="/" class="nav-link">Projects</a>
-      <a href="/" class="nav-link">Experience</a>
-      <a href="/" class="nav-link">Contact</a>
-    </div>
-    <div class="w-auto sm:w-full flex justify-center mt-16 sm:mt-0">
-      <Button text="Hire me" color="primary" link="/" blank={false} />
-    </div>
-  </nav>
+      <div
+        class="flex flex-col text-center gap-2 min-h-7/12 sm:min-h-0 justify-between sm:flex-row sm:gap-5"
+      >
+        <a href="/" class="nav-link">Skills</a>
+        <a href="/" class="nav-link">Projects</a>
+        <a href="/" class="nav-link">Experience</a>
+        <a href="/" class="nav-link">Contact</a>
+      </div>
+      <div class="w-auto sm:w-full flex justify-center mt-16 sm:mt-0">
+        <Button text="Hire me" color="primary" link="/" blank={false} />
+      </div>
+    </nav>
+  </div>
 </header>
 
 <script>
@@ -48,5 +46,6 @@ import Button from "./Button.astro";
     nav?.classList.toggle("hidden");
     menuIcon?.classList.toggle("hidden");
     closeIcon?.classList.toggle("hidden");
+    document.body.classList.toggle("overflow-hidden");
   });
 </script>
