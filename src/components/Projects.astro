@@ -1,0 +1,33 @@
+---
+import { PROJECTS } from "../utils/project";
+---
+
+<section class="container-main py-24">
+  <h2 class="text-3xl font-bold mb-10">Featured Case Studies</h2>
+  <div class="grid md:grid-cols-2 gap-8">
+    {
+      PROJECTS.map((project) => (
+        <article class="bg-[#0B1220] rounded-xl overflow-hidden border border-white/10">
+          <div class="p-6">
+            <div class="flex gap-2 mb-3">
+              {project.tags.map((tag) => (
+                <span class="text-xs bg-black/40 px-2 py-1 rounded">{tag}</span>
+              ))}
+            </div>
+
+            <h3 class="text-xl font-semibold">{project.title}</h3>
+            <p class="text-gray-400 mt-2">{project.description}</p>
+
+            <a
+              href={project.github}
+              target="_blank"
+              class="mt-4 inline-block text-blue-400 hover:underline"
+            >
+              View Full Case Study
+            </a>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
