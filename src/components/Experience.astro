@@ -1,0 +1,50 @@
+---
+import { EXPERIENCES } from "../utils/experience";
+---
+
+<section id="experience" class="py-24 bg-slate-950/50" id="experience">
+  <div class="container-main">
+    <div class="mb-16 text-center">
+      <h3 class="text-primary font-bold tracking-widest uppercase text-sm mb-4">
+        Journey
+      </h3>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-100">
+        Professional Experience
+      </h2>
+    </div>
+    <div class="relative space-y-12">
+      <!-- Vertical Line -->
+      <div
+        class="absolute left-0 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-slate-800 to-transparent"
+      >
+      </div>
+      {
+        EXPERIENCES.map((exp, index) => (
+          <div
+            class={`relative flex flex-col md:flex-row md:justify-between items-start md:items-center pl-5 md:pl-0 ${
+              index % 2 === 0
+                ? "md:flex-row-reverse text-left md:text-right"
+                : ""
+            }`}
+          >
+            <div
+              class={`md:w-[45%] mb-4 md:mb-0 order-2 md:order-1 ${index % 2 === 0 ? "md:text-left" : "md:text-right"}`}
+            >
+              <h4 class="text-xl font-bold text-slate-100">{exp.role}</h4>
+              <p class="text-primary font-semibold mb-2">{exp.company}</p>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                {exp.description}
+              </p>
+            </div>
+
+            <div class="absolute left-[-5px] md:left-1/2 md:-translate-x-1.5 top-1.5 md:top-auto size-3 rounded-full bg-primary ring-4 ring-primary/20 z-10 order-1 md:order-2" />
+
+            <div class="md:w-[45%] md:pl-8 text-slate-500 font-medium order-3">
+              {exp.period}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
