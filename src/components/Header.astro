@@ -6,7 +6,7 @@ import Button from "./Button.astro";
 
 <header class="sticky top-0 pt-8 pb-5 bg-black/90 backdrop-blur-md z-40">
   <div class="container-main flex justify-between items-center">
-    <a class="text-3xl font-extrabold" href="/">VN.</a>
+    <a class="text-3xl font-extrabold" href="#hero">VN.</a>
     <button id="menuToggle" class="cursor-pointer" aria-label="Toggle menu">
       <Menu
         id="openMenu"
@@ -16,7 +16,6 @@ import Button from "./Button.astro";
         class="close-icon size-8 text-[var(--color-text)] cursor-pointer hidden"
       />
     </button>
-
     <nav
       id="mainNav"
       class="bg-black/95 backdrop-blur-md z-40 absolute top-full left-0 w-full hidden flex-col items-center gap-9 pt-8 h-dvh sm:max-h-max sm:static sm:flex sm:flex-row sm:bg-transparent sm:backdrop-blur-none sm:w-auto sm:pt-0"
@@ -24,13 +23,13 @@ import Button from "./Button.astro";
       <div
         class="flex flex-col text-center gap-2 min-h-7/12 sm:min-h-0 justify-between sm:flex-row sm:gap-5"
       >
-        <a href="/" class="nav-link">Skills</a>
-        <a href="/" class="nav-link">Projects</a>
-        <a href="/" class="nav-link">Experience</a>
-        <a href="/" class="nav-link">Contact</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </div>
       <div class="w-auto sm:w-full flex justify-center mt-16 sm:mt-0">
-        <Button text="Hire me" color="primary" link="/" blank={false} />
+        <Button text="Hire me" color="primary" link="mailto:hello@vallipriya.com" blank={true} />
       </div>
     </nav>
   </div>
@@ -38,14 +37,26 @@ import Button from "./Button.astro";
 
 <script>
   const nav = document.getElementById("mainNav");
-  const toggle = document.getElementById("menuToggle");
-  const menuIcon = toggle?.querySelector(".menu-icon");
-  const closeIcon = toggle?.querySelector(".close-icon");
+const toggle = document.getElementById("menuToggle");
+const menuIcon = toggle?.querySelector(".menu-icon");
+const closeIcon = toggle?.querySelector(".close-icon");
 
-  toggle?.addEventListener("click", () => {
-    nav?.classList.toggle("hidden");
-    menuIcon?.classList.toggle("hidden");
-    closeIcon?.classList.toggle("hidden");
-    document.body.classList.toggle("overflow-hidden");
+toggle?.addEventListener("click", () => {
+  nav?.classList.toggle("hidden");
+  menuIcon?.classList.toggle("hidden");
+  closeIcon?.classList.toggle("hidden");
+  document.body.classList.toggle("overflow-hidden");
+});
+
+
+const links = nav?.querySelectorAll("a");
+
+links?.forEach(link => {
+  link.addEventListener("click", () => {
+    nav?.classList.add("hidden");
+    menuIcon?.classList.remove("hidden");
+    closeIcon?.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
   });
+});
 </script>
