@@ -1,22 +1,32 @@
 ---
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+
 interface ButtonProps {
-  text: string
-  color?: "primary" | "secondary"
-  link: string
-  blank?: boolean
+  text: string;
+  color?: "primary" | "secondary";
+  link: string;
+  blank?: boolean;
+  icon?: AstroComponentFactory;
 }
 
-const { text, color = "primary", link, blank = false } = Astro.props as ButtonProps
+const {
+  text,
+  color = "primary",
+  link,
+  blank = false,
+  icon: Icon,
+} = Astro.props as ButtonProps;
 
 const baseStyles =
-  "max-w-max inline-flex items-center text-base px-7 py-3 font-bold rounded-xl text-pretty transition-transform hover:scale-105"
+  "max-w-max inline-flex items-center text-base px-7 py-3 gap-3 font-bold rounded-xl text-pretty";
 
 const variants = {
   primary:
-    "bg-[var(--color-primary)] text-white",
+    "bg-[var(--color-primary)] text-white transition-transform hover:scale-105",
   secondary:
-    "bg-slate-900 border border-slate-800 text-slate-100"
-}
+    "bg-slate-900 border border-slate-800 text-slate-100 transition-transform hover:scale-105",
+  tertiary: "bg-slate-800 hover:bg-slate-700 transition-colors",
+};
 ---
 
 <a
@@ -24,5 +34,6 @@ const variants = {
   target={blank ? "_blank" : "_self"}
   class={`${baseStyles} ${variants[color]}`}
 >
+  {Icon && <Icon class="size-6" />}
   {text}
 </a>
